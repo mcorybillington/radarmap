@@ -28,14 +28,17 @@ namespace radarMap
 
         private void frmSettings_FormClosing(object sender, FormClosingEventArgs e)
         {
-            var diagResult = MessageBox.Show(this, "Would you like to save changes", "Save?", MessageBoxButtons.YesNo);
-            if (diagResult == DialogResult.Yes)
+            if (_hasChanges)
             {
-                Properties.Settings.Default.Save();
-            }
-            else
-            {
-                Properties.Settings.Default.Reload();
+                var diagResult = MessageBox.Show(this, "Would you like to save changes", "Save?", MessageBoxButtons.YesNo);
+                if (diagResult == DialogResult.Yes)
+                {
+                    Properties.Settings.Default.Save();
+                }
+                else
+                {
+                    Properties.Settings.Default.Reload();
+                }
             }
         }
 
