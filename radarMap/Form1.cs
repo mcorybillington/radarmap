@@ -16,5 +16,18 @@ namespace radarMap
         {
             InitializeComponent();
         }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void settingsToolStripSettings_Click(object sender, EventArgs e)
+        {
+            using (var settingsForm = new frmSettings())
+            {
+                settingsForm.ShowDialog(this);
+            }
+        }
     }
 }
