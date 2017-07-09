@@ -5,5 +5,11 @@
     <Setting Name="WUApi_Key" Type="System.String" Scope="User">
       <Value Profile="(Default)">Set your API Key here</Value>
     </Setting>
+    <Setting Name="Center_Lat" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">29.6516342</Value>
+    </Setting>
+    <Setting Name="Center_Lon" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">-82.32483</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

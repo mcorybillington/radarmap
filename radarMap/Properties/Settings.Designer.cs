@@ -34,5 +34,29 @@ namespace radarMap.Properties {
                 this["WUApi_Key"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("29.6516342")]
+        public float Center_Lat {
+            get {
+                return ((float)(this["Center_Lat"]));
+            }
+            set {
+                this["Center_Lat"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("-82.32483")]
+        public float Center_Lon {
+            get {
+                return ((float)(this["Center_Lon"]));
+            }
+            set {
+                this["Center_Lon"] = value;
+            }
+        }
     }
 }
