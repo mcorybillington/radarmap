@@ -11,5 +11,8 @@
     <Setting Name="Center_Lon" Type="System.Single" Scope="User">
       <Value Profile="(Default)">-82.32483</Value>
     </Setting>
+    <Setting Name="Radius" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">100</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

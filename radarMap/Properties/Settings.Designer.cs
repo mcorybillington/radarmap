@@ -58,5 +58,17 @@ namespace radarMap.Properties {
                 this["Center_Lon"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("100")]
+        public int Radius {
+            get {
+                return ((int)(this["Radius"]));
+            }
+            set {
+                this["Radius"] = value;
+            }
+        }
     }
 }

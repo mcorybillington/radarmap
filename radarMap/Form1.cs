@@ -40,7 +40,7 @@ namespace radarMap
                 using (var client = new WebClient())
                 {
                     var data = client.DownloadData(
-                        $"http://api.wunderground.com/api/{Properties.Settings.Default.WUApi_Key}/radar/image.gif?centerlat={Properties.Settings.Default.Center_Lat}&centerlon={Properties.Settings.Default.Center_Lon}&radius=30&width=1200&height=1200&newmaps=1&smooth=1");
+                        $"http://api.wunderground.com/api/{Properties.Settings.Default.WUApi_Key}/radar/image.gif?centerlat={Properties.Settings.Default.Center_Lat}&centerlon={Properties.Settings.Default.Center_Lon}&radius={Properties.Settings.Default.Radius}&width=1200&height=1200&newmaps=1&smooth=1");
 
                     var ms = new MemoryStream(data);
 
