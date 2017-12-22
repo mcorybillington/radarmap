@@ -33,7 +33,7 @@ namespace radarMap
             }
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        public void Form1_Load(object sender, EventArgs e)
         {
             try
             {
@@ -44,14 +44,44 @@ namespace radarMap
 
                     var ms = new MemoryStream(data);
 
-                        backgroundImage = System.Drawing.Image.FromStream(ms);
-                        this.BackgroundImage = backgroundImage;
+                    backgroundImage = System.Drawing.Image.FromStream(ms);
+                    this.BackgroundImage = backgroundImage;
+                    Application.DoEvents();
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Unable to download radar");
             }
+        }
+        public void formClosed(object sender, EventArgs e)
+        {
+            frmSettings child = new frmSettings(); //create new isntance of form
+            child.FormClosed += new FormClosedEventHandler(child_FormClosed); //add handler to catch when child form is closed
+            child.Show(); //show child
+        }
+        void child_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            //when child form is closed, this code is executed
+
+            Form1_Load(null, new EventArgs());
+            
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void refreshButton_Click(object sender, EventArgs e)
+        {
+            Form1_Load(null, new EventArgs());
+            this.Refresh();
+        }
+
+        private void closeButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

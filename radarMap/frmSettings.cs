@@ -34,12 +34,15 @@ namespace radarMap
                 if (diagResult == DialogResult.Yes)
                 {
                     Properties.Settings.Default.Save();
+                    Form1.ActiveForm.Refresh();
+                    
                 }
                 else
                 {
                     Properties.Settings.Default.Reload();
                 }
             }
+            
         }
 
         private void Default_PropertyChanged(object sender, PropertyChangedEventArgs e)
